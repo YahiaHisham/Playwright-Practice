@@ -14,7 +14,6 @@ public class SignupLoginPage extends PageBase {
 
     public SignupLoginPage setSignupName() {
         setElementText(signupName, "Yahia Hisham");
-
         return this;
     }
 
@@ -23,14 +22,13 @@ public class SignupLoginPage extends PageBase {
         return this;
     }
 
-    public SignupLoginPage clickOnSignupButton() {
+    public void clickOnSignupButton() {
         clickOnElement(signupButton);
-        return this;
     }
 
     public void enterSignupNameAndEmail() {
-        setSignupName();
-        setSignupMail();
-        clickOnSignupButton();
+        setSignupName()
+                .setSignupMail()
+                .clickOnSignupButton();
     }
 }
